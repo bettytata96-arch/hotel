@@ -1,11 +1,10 @@
-// Room data (Prices are in Ethiopian Birr - ETB)
 let rooms = [
     { room: 101, type: "Single", price: 1500, occupied: false, guest: null },
     { room: 102, type: "Double", price: 2500, occupied: false, guest: null },
     { room: 103, type: "Suite",  price: 4000, occupied: false, guest: null }
 ];
 
-// Get HTML elements
+
 const guestNameInput = document.getElementById("guest-name");
 const roomTypeSelect = document.getElementById("room-type");
 const checkInBtn = document.getElementById("check-in-btn");
@@ -69,3 +68,4 @@ function checkOut() {
 // Button events
 checkInBtn.addEventListener("click", checkIn);
 checkOutBtn.addEventListener("click", checkOut);
+
