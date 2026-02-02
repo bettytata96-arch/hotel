@@ -3,145 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>Hotel Reception System</title>
-    <link rel="stylesheet" href="style.css"> 
-    <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-}
-
-
-.container {
-    width: 380px;
-    padding: 30px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    color: #fff;
-    animation: fadeIn 0.8s ease;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    font-weight: 600;
-    color: #ffd700;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
-}
-
-
-input, select {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 12px;
-    border: none;
-    outline: none;
-    font-size: 15px;
-    background: rgba(255, 255, 255, 0.9);
-}
-
-
-button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.checkin {
-    background: linear-gradient(135deg, #38ef7d, #11998e);
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.checkin:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(56, 239, 125, 0.4);
-}
-
-
-.checkout {
-    background: linear-gradient(135deg, #ff512f, #dd2476);
-    color: #fff;
-}
-
-.checkout:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(255, 81, 47, 0.4);
-}
-
-
-#output {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 12px;
-    background: rgba(0, 0, 0, 0.35);
-    font-size: 14px;
-    min-height: 60px;
-    text-align: center;
-    animation: glow 2s infinite alternate;
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes glow {
-    from {
-        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-    }
-    to {
-        box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
-    }
-}
-
-    </style>
 </head>
 <body>
 
-<div class="container">
-    <h2>🏨 Hotel Reception</h2>
+<center>
+    <h1>🏨 HOTEL RECEPTION SYSTEM</h1>
+    <p><em>Simple JavaScript-based check-in & check-out</em></p>
+    <hr width="70%">
+</center>
 
-    <input type="text" id="guest-name" placeholder="Guest Name">
+<br>
 
-    <select id="room-type">
-        <option value="Single">Single Room</option>
-        <option value="Double">Double Room</option>
-        <option value="Suite">Suite</option>
-    </select>
+<form>
+    <fieldset>
+        <legend><strong>🧾 Guest Information</strong></legend>
 
-    <button class="checkin" id="check-in-btn">Check In</button>
-    <button class="checkout" id="check-out-btn">Check Out</button>
+        <table cellpadding="10" align="center">
+            <tr>
+                <td><strong>Guest Name:</strong></td>
+                <td>
+                    <input type="text" id="guest-name" placeholder="Enter guest name">
+                </td>
+            </tr>
 
-    <div id="output">Enter guest details</div>
-</div>
+            <tr>
+                <td><strong>Room Type:</strong></td>
+                <td>
+                    <select id="room-type">
+                        <option value="Single">Single Room</option>
+                        <option value="Double">Double Room</option>
+                        <option value="Suite">Suite</option>
+                    </select>
+                </td>
+            </tr>
 
-<script src="script1.js"></script>
+            <tr>
+                <td colspan="2" align="center">
+                    <br>
+                    <button type="button" id="check-in-btn">✅ Check In</button>
+                    &nbsp;&nbsp;&nbsp;
+                    <button type="button" id="check-out-btn">🚪 Check Out</button>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+
+<br>
+
+<fieldset>
+    <legend><strong>Registered </strong></legend>
+    <p id="output" align="center">
+        Please enter guest details to continue
+    </p>
+</fieldset>
+
+<br>
+
+<center>
+    <small>
+        © Hotel Reception System | JavaScript Project
+    </small>
+</center>
+
+<!-- External JavaScript -->
+<script src="js.js"></script>
+
 </body>
 </html>
